@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title> Spark Index</title>
+</head>
+<body>
+    <h1 if="!String.IsNullOrEmpty(ViewBag.Message)">
+        ${ViewBag.Message}
+    </h1>
+    <p>
+        This is a spark view
+    </p>
+    <viewdata 
+        Products="System.Collections.Generic.List[[SparkDemo.Models.Product]]"/>
+    <div>
+    <div  each="var product in Products">
+        <h4>${product.ProductName}</h4>
+        <div>${product.Description}</div>
+    </div>
+</div>
+</body>
+</html>
